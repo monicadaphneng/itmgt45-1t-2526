@@ -16,7 +16,7 @@ def relationship_status(from_member, to_member, social_graph):
 
     This function describes the relationship that two users have with each other.
 
-    Please see "assignment-4-sample-data.py" for sample data. The social graph
+    Please see "set_3_sample_data.py" for sample data. The social graph
     will adhere to the same pattern.
 
     Parameters
@@ -50,7 +50,7 @@ def tic_tac_toe(board):
 
     This function evaluates a tic tac toe board and returns the winner.
 
-    Please see "assignment-4-sample-data.py" for sample data. The board will adhere
+    Please see "set_3_sample_data.py" for sample data. The board will adhere
     to the same pattern. The board may by 3x3, 4x4, 5x5, or 6x6. The board will never
     have more than one winner. The board will only ever have 2 unique symbols at the same time.
 
