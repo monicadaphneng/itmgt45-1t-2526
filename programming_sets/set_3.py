@@ -31,10 +31,10 @@ def relationship_status(from_member, to_member, social_graph):
     Returns
     -------
     str
-        "follower" if fromMember follows toMember,
-        "followed by" if fromMember is followed by toMember,
-        "friends" if fromMember and toMember follow each other,
-        "no relationship" if neither fromMember nor toMember follow each other.
+        "follower" if from_member follows to_member,
+        "followed by" if from_member is followed by to_member,
+        "friends" if from_member and to_member follow each other,
+        "no relationship" if neither from_member nor to_member follow each other.
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
