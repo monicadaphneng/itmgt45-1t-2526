@@ -78,7 +78,7 @@ def eta(first_stop, second_stop, route_map):
     This function returns how long it will take the shuttle to arrive at a stop
     after leaving another stop.
 
-    Please see "mod-4-ipa-1-sample-data.py" for sample data. The route map will
+    Please see "set_3_sample_data.py" for sample data. The route map will
     adhere to the same pattern. The route map may contain more legs and more stops,
     but it will always be one-way and fully enclosed.
 
