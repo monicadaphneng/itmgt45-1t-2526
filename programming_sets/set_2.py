@@ -97,7 +97,7 @@ def vigenere_cipher(message, key):
     Example:
     vigenere_cipher("A C", "KEY") -> "K A"
 
-    If needed, the keyphrase is extended to match the length of the key.
+    If needed, the key is extended to match the length of the message.
         If the key is "KEY" and the message is "LONGTEXT",
         the key will be extended to be "KEYKEYKE".
 
