@@ -2,95 +2,66 @@
 
 This assignment will familiarize you with Python's basics.
 '''
+import math
 
 def savings(gross_pay, tax_rate, expenses):
-    '''Savings.
+    """
+    Function that calculates the money remaining after taxes and expenses.
 
-    This function calculates the money remaining
-        for an employee after taxes and expenses.
-
-    To get the take-home pay of an employee, we will
-        follow the following process:
-        1. Apply the tax rate to the gross pay of the employee; round down
-        2. Subtract the expenses from the after-tax pay of the employee
-
-    Parameters
-    ----------
+    Parameters:
     gross_pay: int
-        the gross pay of an employee for a certain time period, expressed in centavos
+        Gross salary earned in one pay period.
     tax_rate: float
-        the tax rate for a certain time period, expressed as a number between 0 and 1 (e.g., 0.12)
+        The tax rate for a particular pay period (a number between 0 and 1).
     expenses: int
-        the expenses of an employee for a certain time period, expressed in centavos
+        Expenses paid in a pay period.
 
-    Returns
-    -------
-    int
-        the number of centavos remaining from an employee's pay after taxes and expenses
-    '''
-    # Replace `pass` with your code.
-    # Stay within the function. Only use the parameters as input. The function should return your answer.
-    pass
+    Returns:
+    int: Money remaining after taxes and expenses.
+    """
+    after_tax = math.floor(gross_pay * (1 - tax_rate))
+    remaining = after_tax - expenses
+    return remaining
+
 
 def material_waste(total_material, material_units, num_jobs, job_consumption):
-    '''Material Waste.
+    """
+    Function that calculates how much material input will be wasted after
+    running a number of jobs that consume a set amount of material.
 
-    This function calculates how much material input will be wasted
-        after running a certain number of jobs that consume
-        a set amount of material.
-
-    To get the waste of a set of jobs:
-        1. Multiply the number of jobs by the material consumption per job.
-        2. Subtract the total material consumed from the total material available.
-
-    The users of this function also want you to format the output as a string, annotated with the
-        units in which the material is expressed. Do not add a space between the number and the unit.
-
-    Parameters
-    ----------
+    Parameters:
     total_material: int
-        the total material available
+        Total material available.
     material_units: str
-        the units used to express a quantity of the material (e.g., "kg", "L", etc.)
+        Units of the material (e.g., "kg", "L", "m").
     num_jobs: int
-        the number of jobs to run
+        Number of jobs to run.
     job_consumption: int
-        the amount of material consumed per job
+        Material consumption per job.
 
-    Returns
-    -------
-    str
-        the amount of remaining material expressed with its unit (e.g., "10kg").
-    '''
-    # Replace `pass` with your code.
-    # Stay within the function. Only use the parameters as input. The function should return your answer.
-    pass
+    Returns:
+    str: Remaining material with units (e.g., "10kg").
+    """
+    consumed = num_jobs * job_consumption
+    waste = total_material - consumed
+    return str(waste) + material_units
+
 
 def interest(principal, rate, periods):
-    '''Interest.
+    """
+    Function that calculates the final value of an investment based on
+    simple interest.
 
-    This function calculates the final value of an investment after
-        gaining simple interest over a number of periods.
-
-    To calculate simple interest, simply multiply the principal to the quantity (rate * time).
-        Add this amount to the principal to get the final value.
-
-    Round down the final amount.
-
-    Parameters
-    ----------
+    Parameters:
     principal: int
-        the principal (i.e., starting) amount invested, expressed in centavos
+        The principal amount invested.
     rate: float
-        the interest rate per period, expressed as a decimal representation of a percentage (e.g., 3% is 0.03)
+        Interest rate per period (a number between 0 and 1).
     periods: int
-        the number of periods invested
+        Number of periods the money is invested for.
 
-    Returns
-    -------
-    int
-        the final value of the investment
-    '''
-    # Replace `pass` with your code.
-    # Stay within the function. Only use the parameters as input. The function should return your answer.
-    pass
+    Returns:
+    int: Final value of the investment after interest, rounded down.
+    """
+    final_value = principal + (principal * rate * periods)
+    return math.floor(final_value)
